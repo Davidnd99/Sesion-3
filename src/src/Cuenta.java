@@ -8,7 +8,7 @@ package src;
  *
  * @author David
  */
-public class Cuenta {
+public class Cuenta{
     
     private int saldo;
     
@@ -16,11 +16,25 @@ public class Cuenta {
         this.saldo = saldo;
     }
     
-    public int Reintegro(){
-        return 0;
+    public int Reintegro(int dinero){
+        
+        if(saldo > -500){
+            saldo = saldo - dinero;
+        }
+        
+        return saldo;
     }
     
     public int deposito(int ingreso){
-        return 0;
+        
+        saldo = saldo + ingreso;
+        
+        return saldo;
     }
+
+    Object getSaldo() {
+        
+        return saldo;
+    }
+
 }
